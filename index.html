@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin & Client Panels</title>
+    <style>
+        .hidden {
+            display: none;
+        }
+        .container {
+            width: 50%;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            text-align: center;
+        }
+        button {
+            padding: 10px 20px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #007BFF;
+            color: white;
+        }
+        button:disabled {
+            background-color: #aaa;
+            cursor: not-allowed;
+        }
+        button:hover:enabled {
+            background-color: #0056b3;
+        }
+        input {
+            padding: 10px;
+            margin: 10px 0;
+            width: 80%;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        p {
+            margin: 10px 0;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Login Screen -->
+    <div class="container" id="login-screen">
+        <h2>Login</h2>
+        <p>请选择你的角色</p>
+        <button id="admin-login-btn">Rayna</button>
+        <button id="client-login-btn">HB</button>
+    </div>
+
+    <!-- Admin Panel -->
+    <div class="container hidden" id="admin-panel">
+        <h2>Admin Panel</h2>
+        <p id="n-admin-display">Current N = 100</p>
+        <label for="set-n-input">Enter a number to add or subtract:</label>
+        <input type="number" id="set-n-input" placeholder="Enter a number">
+        <button id="set-n-btn">Add/Subtract</button>
+        <button id="reset-everything-btn">Reset Everything</button>
+        <button id="logout-admin-btn">Logout</button>
+    </div>
+
+    <!-- Client Panel -->
+    <div class="container hidden" id="client-panel">
+        <h2>HB🐷</h2>
+        <p id="n-client-display">剩余抽卡次数 = 100</p>
+        <p id="result-client">欢迎抽卡👏</p>
+
+        <!-- Sum and Counts -->
+        <p id="sum-client">R币: 0</p>
+        <p id="sr-count-client">免生气卡: 0</p>
+        <p id="ssr-count-client">愿望卡: 0</p>
+        <p id="sssr-count-client">万能卡: 0</p>
+
+        <!-- Buttons -->
+        <button id="generate-once-btn">抽卡一次</button>
+        <button id="generate-ten-btn">抽卡10次</button>
+        <button id="logout-client-btn">Logout</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
